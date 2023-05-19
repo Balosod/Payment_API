@@ -1,1 +1,2 @@
-# Payment_API
+# Payment_API Documentation
+## Stripe
