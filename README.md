@@ -1,7 +1,7 @@
 # Payment_API Documentation
 ### (1) Stripe
 #### Use the link given below to create a post request
-```` http://127.0.0.1:8000/stripe ````
+```` https://100088.pythonanywhere.com/api/stripe ````
 #### Where the body of the POST request contain the price which will be deducted from the customer account.
 ```` {"price":40}````
 #### A response with status code 200 will be return which contains a checkout link for the user to complete the payment process, this response  will be loaded from the client side. 
@@ -10,7 +10,7 @@
 
 ### (2) Paypal
 #### Use the link given below to create a post request
-```` http://127.0.0.1:8000/paypal ````
+```` https://100088.pythonanywhere.com/api/paypal ````
 #### Where the body of the POST request contain the price which will be deducted from the customer account.
 ```` {"price":50}````
 #### A response with status code 200 will be return which contains a checkout link for the user to complete the payment process, this response  will be loaded from the client side. 
