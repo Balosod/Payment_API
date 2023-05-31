@@ -6,7 +6,9 @@
 #### Where the body of the POST request contain the price which will be deducted from the customer account.
 
 #### Example of the body to be sent in the API : POST
+#### Note that Default price currency is USD
 ```
+
 {
   "price": 34,
   "product": "Workflow AI"
@@ -27,6 +29,8 @@
 #### Where the body of the POST request contain the price which will be deducted from the customer account.
 
 #### Example of the body to be sent in the API : POST
+#### Note that Default price currency is USD
+
 ```
 {
   "price": 34,
