@@ -6,7 +6,9 @@
 #### Where the body of the POST request contain the price which will be deducted from the customer account.
 
 #### Example of the body to be sent in the API : POST
-``` {"price":40}```
+```
+{"price":40}
+```
 #### A response with status code 200 will be return which contains a checkout link for the user to complete the payment process, this response  will be loaded from the client side. 
 
 #### Response to API
@@ -16,10 +18,19 @@
 ```
 
 
-### (2) Paypal
-#### Use the link given below to create a post request
-```` https://100088.pythonanywhere.com/api/paypal ````
+### 2. Paypal
+### Request METHOD : POST
+#### End-Point: https://100088.pythonanywhere.com/api/paypal
 #### Where the body of the POST request contain the price which will be deducted from the customer account.
-```` {"price":50}````
+
+#### Example of the body to be sent in the API : POST
+```
+{"price":50}
+```
 #### A response with status code 200 will be return which contains a checkout link for the user to complete the payment process, this response  will be loaded from the client side. 
-```` {"checkout url": "https://www.sandbox.paypal.com/checkoutnow?token=3D273334GG998674X"}  ````
+
+#### Response to API
+````
+{"checkout url": "https://www.sandbox.paypal.com/checkoutnow?token=3D273334GG998674X"}
+
+````
