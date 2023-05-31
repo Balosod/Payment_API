@@ -14,7 +14,7 @@
   "product": "Workflow AI"
 }
 ```
-#### A response with status code 200 will be return which contains a checkout link for the user to complete the payment process, this response  will be loaded from the client side. 
+#### A response with status code 200 will be return which contains a approval_url for the user to complete the payment process, this response  will be loaded from the client side. 
 
 #### Response to API
 ```
@@ -37,7 +37,7 @@
   "product": "WifiQRCode"
 }
 ```
-#### A response with status code 200 will be return which contains a checkout link for the user to complete the payment process, this response  will be loaded from the client side. 
+#### A response with status code 200 will be return which contains a approval_url for the user to complete the payment process, this response  will be loaded from the client side. 
 
 #### Response to API
 ````
