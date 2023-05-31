@@ -6,7 +6,7 @@
 #### Where the body of the POST request contain the price which will be deducted from the customer account.
 
 #### Example of the body to be sent in the API : POST
-```` {"price":40}````
+` {"price":40}`
 #### A response with status code 200 will be return which contains a checkout link for the user to complete the payment process, this response  will be loaded from the client side. 
 
 #### Response to API
