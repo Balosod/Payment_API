@@ -1,4 +1,12 @@
 # 100088-Payment-API Documentation
+#### Payment API is a versatile payment integration solution that offers two endpoints: Stripe and PayPal. With this API, we can easily integrate and streamline payment processes using these trusted payment gateways.
+
+#### The Stripe endpoint allows us to securely process online payments using credit and debit cards.With this endpoint, we can provide our customers with a smooth and reliable payment experience.
+
+#### The PayPal endpoint provides us with a convenient way to accept payments from customers who prefer using PayPal
+
+#### In conclusion, This Payment API is a robust integration solution that offers us the ability to process payments seamlessly through Stripe and PayPal. With its security, flexibility, and comprehensive features, this API empowers us to provide our customers with a reliable and convenient payment experience across different payment methods.
+
 # PAYMENT OPTIONS
 ### 1. Stripe
 ### Request METHOD : POST
