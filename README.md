@@ -13,4 +13,4 @@ In conclusion, This Payment API is a robust integration solution that offers us 
 # Documentation and Support
 For detailed API documentation, including endpoint descriptions, request and response examples, and authentication details, please refer to the [API documentation](https://documenter.getpostman.com/view/20868747/2s93mAVLjQ)
 
-If you encounter any issues, have questions, or need assistance with the Geometrical Layout of Big Data API, please contact our support team.
+If you encounter any issues, have questions, or need assistance with the Payment API, please contact our support team.
