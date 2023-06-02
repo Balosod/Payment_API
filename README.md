@@ -10,48 +10,7 @@ In conclusion, This Payment API is a robust integration solution that offers us 
 
 [Documentation Link](https://documenter.getpostman.com/view/20868747/2s93mAVLjQ)
 
-# PAYMENT OPTIONS
-### 1. Stripe
-### Request METHOD : POST
-#### End-Point: https://100088.pythonanywhere.com/api/stripe
-#### Where the body of the POST request contain the price which will be deducted from the customer account.
+# Documentation and Support
+For detailed API documentation, including endpoint descriptions, request and response examples, and authentication details, please refer to the [API documentation](https://documenter.getpostman.com/view/20868747/2s93mAVLjQ)
 
-#### Example of the body to be sent in the API : POST
-#### Note that Default price currency is USD
-```
-
-{
-  "price": 34,
-  "product": "Workflow AI"
-}
-```
-#### A response with status code 200 will be return which contains a approval_url for the user to complete the payment process, this response  will be loaded from the client side. 
-
-#### Response to API
-```
-{"approval_url": "https://checkout.stripe.com/c/pay/cs_live_a1PcUOufapjR2dwu4W75mYiZUcCMnFc7RcXRmKJNrUqvJGWImQIuzVJLOv#fidkdWxOYHwnPyd1blppbHNgWjA0SWtiNT1Jck91bE9PZF9GVURXbkdmaGhTX2JHcUFmZE1XQUtTMEh1VlE0MWY3al9Td3JNa2xsYGxrRFdhbD1CakRrX3RJXTRqcUdPUTF0N1FtbDRcTjxpNTU1VUhiRkRJdCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2F2FcXdwYHgl"}
-
-```
-
-
-### 2. Paypal
-### Request METHOD : POST
-#### End-Point: https://100088.pythonanywhere.com/api/paypal
-#### Where the body of the POST request contain the price which will be deducted from the customer account.
-
-#### Example of the body to be sent in the API : POST
-#### Note that Default price currency is USD
-
-```
-{
-  "price": 34,
-  "product": "WifiQRCode"
-}
-```
-#### A response with status code 200 will be return which contains a approval_url for the user to complete the payment process, this response  will be loaded from the client side. 
-
-#### Response to API
-````
-{"approval_url": "https://www.sandbox.paypal.com/checkoutnow?token=3D273334GG998674X"}
-
-````
+If you encounter any issues, have questions, or need assistance with the Geometrical Layout of Big Data API, please contact our support team.
