@@ -10,6 +10,9 @@ In conclusion, This Payment API is a robust integration solution that offers us 
 
 [Documentation Link](https://documenter.getpostman.com/view/20868747/2s93mAVLjQ)
 
+# Get API KEY
+To access the Payment API, you need to get an API key. This key ensures secure communication between your application and our API. You can get the API key by contacting our support team.
+
 # Documentation and Support
 For detailed API documentation, including endpoint descriptions, request and response examples, and authentication details, please refer to the [API documentation](https://documenter.getpostman.com/view/20868747/2s93mAVLjQ)
 
