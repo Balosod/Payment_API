@@ -2,6 +2,13 @@ from django.db import models
 
 # Create your models here.
 
+
+class APIKey(models.Model):
+    key = models.CharField(max_length=100, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
+    
+    
 class BaseModel(models.Model):
     country_name = models.CharField(max_length=100)
     currency_name = models.CharField(max_length=100)

@@ -16,4 +16,5 @@ class OtherPaymentSerializer(serializers.Serializer):
    
 class PaySerializer(serializers.Serializer):
    price = serializers.IntegerField()
+   product = serializers.CharField()
   

@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.views import View
 from rest_framework.views import APIView
+from rest_framework_api_key.permissions import HasAPIKey
 from rest_framework import status
 from rest_framework.response import Response
 from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 from .serializers import WorkflowPaymentSerializer,PaySerializer,OtherPaymentSerializer
 from .models import (WorkFlowAI,WifiQrcode,DigitalQ,
                      LogoScan,Nps,Voc,UxLive,SocialMediaAutomation,LicenseCompatibility)
@@ -25,10 +27,14 @@ paypalrestsdk.configure({
 })
 
 class PaypalPayment(APIView): 
-    @swagger_auto_schema(request_body=PaySerializer,responses={200: "checkout url"})
+    permission_classes = [HasAPIKey]
+    @swagger_auto_schema(request_body=PaySerializer,responses={200: "checkout url"},
+                         manual_parameters=[openapi.Parameter('Authorization', openapi.IN_HEADER,
+                        description='API Key', type=openapi.TYPE_STRING)])
     def post(self, request):
         data = request.data
         price = data['price']
+        product = data['product']
         payment = paypalrestsdk.Payment({
             'intent': 'sale',
             'payer': {
@@ -39,7 +45,7 @@ class PaypalPayment(APIView):
                     'total':f"{price}" ,
                     'currency': 'USD'
                 },
-                'description': 'Payment description'
+                'description': f"{product}"
             }],
             'redirect_urls': {
                 'return_url': 'https://100088.pythonanywhere.com/test/',
@@ -90,7 +96,7 @@ class StripePaymentWorkflowAI(APIView):
             cancel_url='https://100088.pythonanywhere.com/test/',
             )
             print(session.url)
-            return Response({'checkout_url':f"{session.url}"})
+            return Response({'checkout_url':f"{session.url}"},status = status.HTTP_200_OK)
         except Exception as e:
             print(e)
             return Response({"message":f"{e}"},status=status.HTTP_400_BAD_REQUEST)
@@ -149,7 +155,7 @@ class StripePaymentOther(APIView):
             cancel_url='https://100088.pythonanywhere.com/test/',
             )
             print(session.url)
-            return Response({'checkout_url':f"{session.url}"})
+            return Response({'checkout_url':f"{session.url}"}, status = status.HTTP_200_OK)
         except Exception as e:
             print(e)
             return Response({"message":f"{e}"},status=status.HTTP_400_BAD_REQUEST)

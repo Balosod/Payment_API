@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #External package
     'rest_framework',
     'rest_framework_swagger',
+    'rest_framework_api_key',
     'drf_yasg',
     
     #Internal package
